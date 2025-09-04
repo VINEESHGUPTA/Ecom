@@ -1,16 +1,19 @@
-package com.example.productservice.models;
+package com.example.productservice.dtos;
+
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Product {
+public class FakeStoreProductDTO {
+
     private long id;
     private String title;
     private double price;
-    private Category category;
+    private String category;
     private String desc;
+    private String image;
 
     public long getId() {
         return id;
@@ -36,11 +39,11 @@ public class Product {
         this.price = price;
     }
 
-    public Category getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
@@ -50,6 +53,14 @@ public class Product {
 
     public void setDesc(String desc) {
         this.desc = desc;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
 }
